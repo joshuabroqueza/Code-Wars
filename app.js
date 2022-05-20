@@ -60,3 +60,62 @@
 // }
 
 // console.log(betterThanAverage([ 4, 3 ], 5));
+//////////////////////////////////
+
+//4.
+// Rules for a smiling face:
+
+// Each smiley face must contain a valid pair of eyes. Eyes can be marked as : or ;
+// A smiley face can have a nose but it does not have to. Valid characters for a nose are - or ~
+// Every smiling face must have a smiling mouth that should be marked with either ) or D
+// No additional characters are allowed except for those mentioned.
+
+// Valid smiley face examples: :) :D ;-D :~)
+// Invalid smiley faces: ;( :> :} :]
+
+//return the total number of smiling faces in the array
+// function countSmileys(arr) {
+// 	let z = 0;
+// 	let a = arr;
+// 	for (let i = 0; i < arr.length; i++) {
+// 		if (a[i].length == 2) {
+// 			let b = a[i];
+// 			if (arr[i][0] == ':' || arr[i][0] == ';') {
+// 				for (let x = 0; x <= b.length; x++) {
+// 					if (x === b.length - 1) {
+// 						if (b[b.length - 1] == ')' || b[b.length - 1] == 'D') {
+// 							z += 1;
+// 						}
+// 					}
+// 				}
+// 			}
+// 		} else if (a[i].length == 3) {
+// 			if (a[i][1] == '-' || a[i][1] == '~') {
+// 				let b = a[i];
+// 				if (arr[i][0] == ':' || arr[i][0] == ';') {
+// 					for (let x = 0; x <= b.length; x++) {
+// 						if (x === b.length - 1) {
+// 							if (b[b.length - 1] == ')' || b[b.length - 1] == 'D') {
+// 								z += 1;
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// 	return z;
+
+// 	//Alternative
+// 	// 1.
+// 	// function countSmileys(arr) {
+// 	//     return arr.filter(x => /^[:;][-~]?[)D]$/.test(x)).length;
+// 	//   }
+
+// 	// 2.
+// 	// const SMILING = /[:;]{1}[-~]?[)D]{1}/;
+
+// 	// const countSmileys = (faces) => faces.filter(face => SMILING.test(face)).length;
+// }
+
+// console.log(countSmileys([ ':)', ';(', ';}', ':-D' ]));
