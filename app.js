@@ -119,3 +119,58 @@
 // }
 
 // console.log(countSmileys([ ':)', ';(', ';}', ':-D' ]));
+
+//5.
+
+// You will be given a number and you will need to return it as a string in Expanded Form. For example:
+
+// expandedForm(12); // Should return '10 + 2'
+// expandedForm(42); // Should return '40 + 2'
+
+// function expandedForm(num) {
+//   // Your code here
+//   let numStr = num.toString().split('');
+//   console.log(numStr);
+//   console.log(numStr.length);
+
+//   for (let i = 0; i < numStr.length; i++) {
+//     for (let y = numStr.length - i; y > 1; y--) {
+//       numStr[i] += '0';
+//       // console.log(y);  use this to debug y, and no y value print out from console
+//     }
+//   }
+
+//   numStr = numStr.filter((value) => !value.startsWith(0));
+//   return numStr.join(' + ');
+// }
+
+// console.log(expandedForm(23));
+
+// let input = '2312';
+// let c = String(input);
+// console.log(c.length);
+// if (typeof input !== 'number') {
+//   console.log('falseeee1');
+// } else if (c.length !== 4 && c.length !== 6) {
+//   console.log('falseeee2');
+// } else {
+//   console.log('trueeeee');
+// }
+
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+
+// 6. ATM machines allow 4 or 6 digit PIN codes and PIN codes cannot contain anything but exactly 4 digits or exactly 6 digits.
+
+// If the function is passed a valid PIN string, return true, else return false.
+// Examples (Input --> Output)
+// "1234"   -->  true
+// "12345"  -->  false
+// "a234"   -->  false
+
+// function validatePIN(pin) {
+//   var isNumber = /^\d+$/.test(pin) && (pin.length == 4 || pin.length == 6);
+//   return isNumber;
+// }
+
+// validatePIN('0193');
