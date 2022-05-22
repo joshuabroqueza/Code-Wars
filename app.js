@@ -178,7 +178,7 @@
 ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
 
-// Rock Paper Scissors
+//7. Rock Paper Scissors
 // Let's play! You have to return which player won! In case of a draw return Draw!.
 
 // Examples:
@@ -203,3 +203,62 @@
 // };
 
 // console.log(rps('scissors', 'rock'));
+
+///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+//8.After a hard quarter in the office you decide to get some rest on a vacation. So you will book a flight for you and your girlfriend and try to leave all the mess behind you.
+// You will need a rental car in order for you to get around in your vacation. The manager of the car rental makes you some good offers.
+// Every day you rent the car costs $40. If you rent the car for 7 or more days, you get $50 off your total. Alternatively, if you rent the car for 3 or more days, you get $20 off your total.
+// Write a code that gives out the total amount for different days(d).
+
+////SOLUTION
+// function rentalCarCost(d) {
+//   // Your solution here
+//   if (d <= 0) {
+//     return false;
+//   }
+//   let total = 0;
+//   for (let i = 1; i <= d; i++) {
+//     total += 40;
+//   }
+//   if (d >= 3 && d < 7) {
+//     total -= 20;
+//   } else if (d >= 7) {
+//     total -= 50;
+//   }
+//   return total;
+// }
+// console.log(rentalCarCost(5));
+
+////ALTERNATIVE
+// function rentalCarCost(d) {
+//   return d * 40 - (d >= 7 ? 50 : d >= 3 ? 20 : 0);
+// }
+
+///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+
+//9. Create a function which answers the question "Are you playing banjo?".
+// If your name starts with the letter "R" or lower case "r", you are playing banjo!
+
+// The function takes a name as its only argument, and returns one of the following strings:
+// name + " plays banjo"
+// name + " does not play banjo"
+
+// //SOLUTION
+// function areYouPlayingBanjo(name) {
+//   if (name[0] === 'r' || name[0] === 'R') {
+//     return `${name} plays banjo`;
+//   } else return `${name} does not play banjo`;
+// }
+// console.log(areYouPlayingBanjo('Adam'));
+
+// //ALTERNATIVE
+// function areYouPlayingBanjo(name) {
+//   return (
+//     name +
+//     (name[0].toLowerCase() == 'r' ? ' plays' : ' does not play') +
+//     ' banjo'
+//   );
+// }
