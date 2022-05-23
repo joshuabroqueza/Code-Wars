@@ -262,3 +262,91 @@
 //     ' banjo'
 //   );
 // }
+
+///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+// // 10. Count the number of Duplicates
+// // Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+
+// // Example
+// // "abcde" -> 0 # no characters repeats more than once
+// // "aabbcde" -> 2 # 'a' and 'b'
+// // "aabBcde" -> 2 # 'a' occurs twice and 'b'
+
+// function duplicateCount(text) {
+// 	let a = text;
+// 	let b = [];
+// 	let c = 0;
+// 	for (let i = 0; i < a.length; i++) {
+// 		console.log(i);
+// 		b.push(a[i]);
+// 	}
+// 	for (let i = 0; i < b.length; i++) {
+// 		if (b.includes(a[i])) {
+// 			console.log('truees');
+// 		}
+// 	}
+// 	console.log(b);
+// 	console.log('c:', c);
+// 	return c;
+
+// 	console.log(a);
+// }
+
+// duplicateCount('aabbcde');
+
+///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+// //11.
+// // Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+
+// // [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+
+// //SOLUTION
+// function grow(x) {
+// 	let a = x[0];
+// 	for (let i = 1; i < x.length; i++) {
+// 		a = a * x[i];
+// 	}
+// 	return a;
+// }
+// console.log(grow([ 2, 2, 3, 4 ]));
+// //ALTERNATIVE
+// // const grow=x=> x.reduce((a,b) => a*b);
+
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+// //.12 The Western Suburbs Croquet Club has two categories of membership, Senior and Open. They would like your help with an application form that will tell prospective members which category they will be placed.
+
+// // To be a senior, a member must be at least 55 years old and have a handicap greater than 7. In this croquet club, handicaps range from -2 to +26; the better the player the lower the handicap.
+
+// // Input
+// // Input will consist of a list of pairs. Each pair contains information for a single potential member. Information consists of an integer for the person's age and an integer for the person's handicap.
+
+// // Output
+// // Output will consist of a list of string values (in Haskell and C: Open or Senior) stating whether the respective member is to be placed in the senior or open category.
+
+// // Example
+// // input =  [[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]]
+// // output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
+// function openOrSenior(data) {
+// 	// ...
+// 	let output = [];
+// 	for (let i = 0; i < data.length; i++) {
+// 		// console.log(input[i]);
+// 		// console.log(input[i][0], input[i][1]);
+
+// 		if (data[i][0] >= 55 && data[i][1] > 7) {
+// 			output.push('Senior');
+// 		} else output.push('Open');
+// 	}
+// 	return output;
+// }
+
+// //ALTERNATIVE
+// // Destructuring: [age, handicap] https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+// // Arrow Functions: () => {} https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+
+// // function openOrSenior(data){
+// //     return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
+// //   }
