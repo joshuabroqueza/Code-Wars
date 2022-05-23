@@ -350,3 +350,64 @@
 // // function openOrSenior(data){
 // //     return data.map(([age, handicap]) => (age > 54 && handicap > 7) ? 'Senior' : 'Open');
 // //   }
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//12. Make a program that filters a list of strings and returns a list with only your friends name in it.
+// If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+// Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+// i.e.
+// friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
+// Note: keep the original order of the names in the output.
+
+// //SOLUTION
+// function friend(friends) {
+// 	//your code here
+// 	let a = [];
+// 	friends.forEach((element) => {
+// 		if (element.length === 4) {
+// 			a.push(element);
+// 		}
+// 	});
+// 	return a;
+// }
+
+// friend([ 'Ryan', 'Kieran', 'Mark' ]);
+
+// //ALTERNATIVES
+// function friend(friends){
+//     return friends.filter(n => n.length === 4)
+//   }
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+//13. Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+// Example:
+// ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+// None of the arrays will be empty, so you don't have to worry about that!
+
+//SOLUTION
+// function removeEveryOther(arr) {
+// 	//your code here
+// 	let b = [];
+// 	for (let i = 0; i < arr.length; i++) {
+// 		if (i % 2 == 0) {
+// 			b.push(arr[i]);
+// 		}
+// 	}
+// 	return b;
+// }
+// // removeEveryOther([ 'Hello', 'Goodbye', 'Hello Again' ]);
+// console.log(removeEveryOther([ 'Hello', 'Goodbye', 'Hello Again' ]));
+//USING FOREACH METHOD
+// function removeEveryOther(arr) {
+// 	//your code here
+// 	let b = [];
+// 	arr.forEach((element, index) => {
+// 		if (index % 2 == 0) {
+// 			b.push(element);
+// 		}
+// 	});
+// 	return b;
+// }
+// console.log(removeEveryOther([ 'Hello', 'Goodbye', 'Hello Again' ]));
