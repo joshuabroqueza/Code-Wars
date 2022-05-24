@@ -417,7 +417,7 @@
 //14.Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
 // Write a function which takes a list of strings and returns each line prepended by the correct number.
 // The numbering starts at 1. The format is n: string. Notice the colon and space in between.
-// Examples:
+// Examples:\kumite
 // number([]) // => []
 // number(["a", "b", "c"]) // => ["1: a", "2: b", "3: c"]
 
@@ -432,3 +432,50 @@
 // 	return a;
 // };
 // console.log(number([ 'a', 'b', 'c' ]));
+
+
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+//15. Bob needs a fast way to calculate the volume of a cuboid with three values: the length, width and height of the cuboid. Write a function to help Bob with this calculation.
+// //Cuboid forumula = length x Width x Height
+// //SOLUTION
+// class Kata {
+//     static getVolumeOfCuboid(length, width, height) {
+//         // your code here
+//         return length * width * height
+//     }
+// }
+// console.log(Kata.getVolumeOfCuboid(1, 2, 2));
+
+////////////////////////////////////////////////////
+////////////////////////////////////////////////////
+//16. Our football team finished the championship. The result of each match look like "x:y". Results of all matches are recorded in the collection.
+
+// For example: ["3:1", "2:2", "0:1", ...]
+
+// Write a function that takes such collection and counts the points of our team in the championship. Rules for counting points for each match:
+
+// if x > y: 3 points
+// if x < y: 0 point
+// if x = y: 1 point
+// Notes:
+
+// there are 10 matches in the championship
+// 0 <= x <= 4
+// 0 <= y <= 4
+
+//SOLUTION
+function points(games) {
+    // your code here
+    let score = 0;
+    games.forEach(element => {
+        console.log(element[0]);
+        if (element[0] > element[2]) {
+            score += 3;
+        } else if (element[0] === element[2]) {
+            score += 1;
+        }
+    });
+    return score;
+}
+console.log(points(["1:0", "2:0", "3:0", "4:0", "2:1", "1:3", "1:4", "2:3", "2:4", "3:4"]));
