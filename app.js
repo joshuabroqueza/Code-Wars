@@ -523,17 +523,79 @@
 //19. This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
 
 //SOLUTION
-function simpleMultiplication(number) {
-    // your code........
-    if (number % 2 === 0) {
-        return number * 8;
-    }
-    return number * 9;
-}
+// function simpleMultiplication(number) {
+//     // your code........
+//     if (number % 2 === 0) {
+//         return number * 8;
+//     }
+//     return number * 9;
+// }
 
-//ALTERNATIVE
-function simpleMultiplicatiozn(number) {
-    return number % 2 === 0 ? number * 8 : number * 9;
-}
-console.log(simpleMultiplication(4));
-console.log(simpleMultiplicatiozn(4));
+// //ALTERNATIVE
+// function simpleMultiplicatiozn(number) {
+//     return number % 2 === 0 ? number * 8 : number * 9;
+// }
+// console.log(simpleMultiplication(4));
+// console.log(simpleMultiplicatiozn(4));
+
+
+
+///////////////////////////////////////////////
+//////////////////////////////////////////////
+//20. Complete the square sum function so that it squares each number passed into it and then sums the results together.
+// For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+
+// //SOLUTION
+// function squareSum(numbers) {
+//     if (numbers.length < 1) {
+//         return 0
+//     }
+//     let output = 0;
+//     numbers.forEach((val) => {
+//         output = output + (val * val)
+//     })
+//     return output;
+// }
+// console.log(squareSum([1, 2]));
+
+// //ALTERNATE
+// function squareSum(numbers){
+//     return numbers.reduce(function(sum, n){
+//       return (n*n) + sum;
+//     }, 0)
+//   }
+
+////////////////////////////////////////////
+///////////////////////////////////////////
+
+// //21. Write a function that takes an array of numbers (integers for the tests) and a target number. It should find two different items in the array that, when added together, give the target value. The indices of these items should then be returned in a tuple / list (depending on your language) like so: (index1, index2).
+
+// For the purposes of this kata, some tests may have multiple answers; any valid solutions will be accepted.
+
+// The input will always be valid (numbers will be an array of length 2 or greater, and all of the items will be numbers; target will always be the sum of two different items from that array).
+
+// Based on: http://oj.leetcode.com/problems/two-sum/
+
+//SOLUTION
+
+
+// function twoSum(numbers, target) {
+//     // ...
+//     let sums = [];
+
+//     for (let i = 0; i < numbers.length; i++) {
+//         for (let j = i + 1; j < numbers.length; j++) {
+//             if (numbers[i] + numbers[j] === target) {
+//                 console.log(numbers[i], i);
+//                 sums.push(i, j)
+//             }
+//         }
+//     }
+
+//     return sums;
+// }
+
+// console.log(twoSum([1, 2, 3], 4));
+
+/////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
