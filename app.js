@@ -664,3 +664,77 @@
 // }
 // //////////////////////////////////////////
 // ///////////////////////////////////////////
+
+// //25. You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
+// // #Examples:
+// // Kata.getMiddle("test") should return "es"
+// // Kata.getMiddle("testing") should return "t"
+// // Kata.getMiddle("middle") should return "dd"
+// // Kata.getMiddle("A") should return "A"
+
+// //SOLUTION
+// function getMiddle(s) {
+//     //Code goes here!
+//     if (s.length % 2 === 0) {
+//         let a = s.length / 2;
+//         return `${s[a - 1]}${s[a]}`
+//     } else {
+//         let b = (s.length / 2) - .5
+//         return s[b]
+//     }
+// }
+// console.log(getMiddle("ab45cwe"));
+
+// //ALTERNATIVE
+// function getMiddle(s) {
+//     var middle = s.length / 2;
+//     return (s.length % 2) ?
+//         s.charAt(Math.floor(middle)) :
+//         s.slice(middle - 1, middle + 1);
+// }
+
+// //////////////////////////////////////////
+// ///////////////////////////////////////////
+
+//26. Complete the solution so that it splits the string into pairs of two characters. If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
+
+// Examples:
+
+// * 'abc' =>  ['ab', 'c_']
+// * 'abcdef' => ['ab', 'cd', 'ef']
+
+// //SOLUTION
+// function solution(str) {
+
+//     let output = []
+
+//     if (str.length % 2 === 0) {
+//         for (let i = 0; i < str.length; i = i + 2) {
+//             output.push(`${str[i]}${str[i + 1]}`)
+//         }
+//     } else {
+//         for (let i = 0; i < str.length; i = i + 2) {
+//             output.push(`${str[i]}${str[i + 1]}`)
+//         }
+//         output.splice(output.length - 1);
+//         output.push(`${str[str.length - 1]}_`)
+//     }
+
+//     return output
+// }
+// console.log(solution("2abcd"));
+
+// //ALTERNATIVE
+// function solution(str){
+//     var i = 0;
+//     var result = new Array();
+//     if (str.length % 2 !== 0) {
+//       str = str + '_';
+//     }
+//     while (i < str.length) {
+//         result.push(str[i] + str[i+1]);
+//         i += 2;
+//       }
+//     return result;
+//   }
