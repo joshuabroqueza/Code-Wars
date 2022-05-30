@@ -433,7 +433,6 @@
 // };
 // console.log(number([ 'a', 'b', 'c' ]));
 
-
 ////////////////////////////////////////////////////
 ////////////////////////////////////////////////////
 //15. Bob needs a fast way to calculate the volume of a cuboid with three values: the length, width and height of the cuboid. Write a function to help Bob with this calculation.
@@ -538,8 +537,6 @@
 // console.log(simpleMultiplication(4));
 // console.log(simpleMultiplicatiozn(4));
 
-
-
 ///////////////////////////////////////////////
 //////////////////////////////////////////////
 //20. Complete the square sum function so that it squares each number passed into it and then sums the results together.
@@ -577,7 +574,6 @@
 // Based on: http://oj.leetcode.com/problems/two-sum/
 
 //SOLUTION
-
 
 // function twoSum(numbers, target) {
 //     // ...
@@ -627,7 +623,7 @@
 
 // //SOLUTION
 // function getAge(inputString) {
-//     // return the girl's correct age as an integer. Happy coding :) 
+//     // return the girl's correct age as an integer. Happy coding :)
 //     return Number(inputString[0])
 // }
 // console.log(getAge("4 years old"));
@@ -639,7 +635,6 @@
 // // Examples
 // // "the-stealth-warrior" gets converted to "theStealthWarrior"
 // // "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
-
 
 // function toCamelCase(str) {
 //     str = str.split('');
@@ -738,3 +733,43 @@
 //       }
 //     return result;
 //   }
+
+///////////////////////////////////////////
+///////////////////////////////////////////
+// //27. Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.
+
+// // Your task is to write a function maskify, which changes all but the last four characters into '#'.
+
+// // Examples
+// // "4556364607935616" --> "############5616"
+// //      "64607935616" -->      "#######5616"
+// //                "1" -->                "1"
+// //                 "" -->                 ""
+
+// // // "What was the name of your first pet?"
+
+// // "Skippy" --> "##ippy"
+
+// // "Nananananananananananananananana Batman!"
+// // -->
+// // "####################################man!"
+// // SOLUTION
+// // return masked string
+// function maskify(cc) {
+//   let a = '';
+//   for (let i = 0; i < cc.length; i++) {
+//     if (i < cc.length - 4) {
+//       a += '#';
+//     } else {
+//       a += cc[i];
+//     }
+//   }
+//   return a;
+// }
+// console.log(maskify('4556364607935616'));
+// //ALTERNATIVE
+// function maskify(cc) {
+//   return cc.slice(0, -4).replace(/./g, '#') + cc.slice(-4);
+// }
+// ///////////////////////////////////////////
+// ///////////////////////////////////////////
