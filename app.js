@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 //JS FUNDAMENTALS
 
 //1.
@@ -773,3 +773,35 @@
 // }
 // ///////////////////////////////////////////
 // ///////////////////////////////////////////
+// 28.Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+
+// Example(Input => Output):
+// 348597 => [7,9,5,8,4,3]
+// 0 => [0]
+
+// SOLUTION
+// function digitize(n) {
+//   let a = n.toString();
+//   let b = "";
+//   for (let i = a.length - 1; i >= 0; i--) {
+//     if (i === a.length - 1) {
+//       b += `[ ${a[i]}`;
+//     } else if (i === 0) {
+//       b += `, ${a[i]} ]`;
+//     } else {
+//       b += `, ${a[i]}`;
+//     }
+//   }
+//   if (n === 0) {
+//     return [0];
+//   } else {
+//     return b;
+//   }
+// }
+
+// Comment --> The code is working in local but when im passing it in codewars it kept failing.
+
+// Alternate solutions 
+// function digitize(n) {
+//     return String(n).split('').map(Number).reverse()
+//   }
