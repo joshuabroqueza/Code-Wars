@@ -801,7 +801,37 @@
 
 // Comment --> The code is working in local but when im passing it in codewars it kept failing.
 
-// Alternate solutions 
+// Alternate solutions
 // function digitize(n) {
 //     return String(n).split('').map(Number).reverse()
 //   }
+
+// "Cc": "tjaccetta@sbcglobal.net;test2ere@gmail.com;createtest@yahoo.com",
+
+////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+let a = "tjaccetta@sbcglobal.net;test2ere@gmail.com;createtest@yahoo.com";
+let b = a.split(";");
+let c = [];
+
+for (const to of b) {
+  c.push(`{"email" : "${to}"}`);
+}
+// console.log(b);
+// console.log(c);
+
+const toTransform = function (a) {
+  let b = a.split(";");
+  let c = [];
+  for (const to of b) {
+    c.push(`{"email" : "${to}"}`);
+  }
+  return c;
+};
+
+console.log("test");
+console.log(toTransform(a));
+
+let d = "";
+console.log(d.length);
