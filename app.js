@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 //JS FUNDAMENTALS
 
 //1.
@@ -811,27 +811,63 @@
 ////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
 
-let a = "tjaccetta@sbcglobal.net;test2ere@gmail.com;createtest@yahoo.com";
-let b = a.split(";");
-let c = [];
+// let a = "tjaccetta@sbcglobal.net;test2ere@gmail.com;createtest@yahoo.com";
+// let b = a.split(";");
+// let c = [];
 
-for (const to of b) {
-  c.push(`{"email" : "${to}"}`);
-}
-// console.log(b);
-// console.log(c);
+// for (const to of b) {
+//   c.push(`{"email" : "${to}"}`);
+// }
+// // console.log(b);
+// // console.log(c);
 
-const toTransform = function (a) {
-  let b = a.split(";");
-  let c = [];
-  for (const to of b) {
-    c.push(`{"email" : "${to}"}`);
-  }
-  return c;
-};
+// const toTransform = function (a) {
+//   let b = a.split(";");
+//   let c = [];
+//   for (const to of b) {
+//     c.push(`{"email" : "${to}"}`);
+//   }
+//   return c;
+// };
 
-console.log("test");
-console.log(toTransform(a));
+// console.log("test");
+// console.log(toTransform(a));
 
-let d = "";
-console.log(d.length);
+// let d = "";
+// console.log(d.length);
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+//29. You might know some pretty large perfect squares. But what about the NEXT one?
+// Complete the findNextSquare method that finds the next integral perfect square after the one passed as a parameter.
+// Recall that an integral perfect square is an integer n such that sqrt(n) is also an integer.
+// If the parameter is itself not a perfect square then -1 should be returned. You may assume the parameter is non-negative.
+// Examples:(Input --> Output)
+// 121 --> 144
+// 625 --> 676
+// 114 --> -1 since 114 is not a perfect square
+// function findNextSquare(sq) {
+//   // Return the next square if sq is a perfect square, -1 otherwise
+//   // return -1;
+//   let convertSquare = Math.sqrt(sq);
+//   let b = convertSquare - Math.floor(convertSquare) !== 0;
+//   console.log(b);
+//   if (b) {
+//     return -1;
+//   } else {
+//     let c = Math.sqrt(sq) + 1;
+//     return c * c;
+//   }
+// }
+// console.log(findNextSquare(121));
+//ALTERNATE SOLUTION
+// function findNextSquare(sq) {
+//   let convertSquare = Math.sqrt(sq);
+//   let b = convertSquare - Math.floor(convertSquare) !== 0;
+//   let c = Math.sqrt(sq) + 1;
+//   let d = b === true ? -1 : c * c;
+//   return d;
+// }
+// console.log(findNextSquare(122));
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
