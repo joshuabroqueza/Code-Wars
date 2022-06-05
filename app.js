@@ -935,3 +935,121 @@
 
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+/////////    PROMISE, ASYNC, AWAIT //////////////////////
+
+console.log('start');
+
+// setTimeout(function () {
+//   console.log('heyy processsinggggg');
+// }, 3000);
+
+// const a = [2, 3, 4, 5, 5, 5];
+// for (const x of a) {
+//   console.log(x);
+// }
+
+// function loginUser(username, password, callback) {
+//   setTimeout(function () {
+//     console.log('Now we have the data');
+
+//     // return { userName: username };
+//     callback({ userName: username });
+//   }, 5000);
+// }
+
+// const user = loginUser('wabroqueza', 123123, (user) => {
+//   console.log(user);
+// });
+// console.log(user);
+
+// console.log('end');
+
+//SAMPLE OF PROMISE////////////////////////////////////////////////
+// const promise = new Promise((resolve, reject) => {
+//   let a = 2;
+//   setTimeout(() => {
+//     // resolve('resolveeeee');
+//     if (a == 1) {
+//       resolve('Hey it is resolve');
+//     }
+//     reject(new Error('Faileeddd'));
+//   }, 2000);
+// });
+
+// promise
+//   .then((test) => {
+//     console.log(test);
+//   })
+//   .catch((err) => console.log(err));
+
+// console.log('END');
+
+/////ANOTHER EXAMPLE
+function loginUser(email, password) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log('Now we have the data');
+      resolve({ userEmail: email });
+    }, 3000);
+  });
+}
+
+function getUserVideos(email) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(['video 1', 'video 2', 'video 3']);
+    }, 2000);
+  });
+}
+
+function videoDetails(video) {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Title of the video');
+    }, 2000);
+  });
+}
+
+// loginUser('wa', 'passWa')
+//   .then((user) => getUserVideos(user.email))
+//   .then((videos) => videoDetails(videos[0]))
+//   .then((detail) => console.log(detail));
+
+///BOTH OF THE PROMISE SHOULD BE FULFILLED WHEN USING PROMISE.ALL
+// const yt = new Promise((resolve) => {
+//   setTimeout(() => {
+//     console.log('Getting stuff from youtube');
+//     resolve({ videos: [1, 2, 3, 4, 5] });
+//   }, 2000);
+// });
+
+// const fb = new Promise((resolve) => {
+//   setTimeout(() => {
+//     console.log('Getting stuff from facebook');
+//     resolve({ user: 'Wa Broqueza' });
+//   }, 5000);
+// });
+
+// Promise.all([yt, fb]).then((result) => console.log(result));
+
+////USING ASYNC AND AWAIT
+async function displayUser() {
+  try {
+    const getLog = await loginUser('ed', 234234);
+    const videos = await getUserVideos(getLog.userEmail);
+    const details = await videoDetails(videos[0]);
+    console.log(details);
+  } catch (err) {
+    console.log('We could not get the videoss');
+  }
+}
+
+displayUser();
+
+//////////////////    END END END END      //////////////
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
