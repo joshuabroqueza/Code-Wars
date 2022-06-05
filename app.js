@@ -871,3 +871,67 @@
 
 ////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
+
+//30.
+// Given an array of ones and zeroes, convert the equivalent binary value to an integer.
+
+// Eg: [0, 0, 0, 1] is treated as 0001 which is the binary representation of 1.
+
+// Examples:
+
+// Testing: [0, 0, 0, 1] ==> 1
+// Testing: [0, 0, 1, 0] ==> 2
+// Testing: [0, 1, 0, 1] ==> 5
+// Testing: [1, 0, 0, 1] ==> 9
+// Testing: [0, 0, 1, 0] ==> 2
+// Testing: [0, 1, 1, 0] ==> 6
+// Testing: [1, 1, 1, 1] ==> 15
+// Testing: [1, 0, 1, 1] ==> 11
+
+// [ 0, 0, 0, 0 ]
+// [ 8, 4, 2, 1 ]
+
+//SOLUTION
+// const binaryArrayToNumber = (arr) => {
+//   // your code
+//   const binary = arr.join('');
+//   return parseInt(binary, 2);
+// };
+
+// // console.log(BigInt64Array([1, 0, 1, 1]));
+// console.log('ouput', binaryArrayToNumber([1, 1, 1, 1]));
+
+// ////////////////////////////////////////////////////////////////////////////////////////////////////////
+// //31. Character recognition software is widely used to digitise printed texts. Thus the texts can be edited, searched and stored on a computer.
+
+// When documents (especially pretty old ones written with a typewriter), are digitised character recognition softwares often make mistakes.
+
+// Your task is correct the errors in the digitised text. You only have to handle the following mistakes:
+
+// S is misinterpreted as 5
+// O is misinterpreted as 0
+// I is misinterpreted as 1
+// The test cases contain numbers only by mistake.
+
+// //SOLUTION
+// function correct(string) {
+//   // your code here
+//   let a = '';
+//   for (const x of string) {
+//     if (x === '0') {
+//       a += 'O';
+//     } else if (x === '5') {
+//       a += 'S';
+//     } else if (x === '1') {
+//       a += 'I';
+//     } else {
+//       a += x;
+//     }
+//   }
+//   return a;
+// }
+
+// console.log(correct('L0ND0N'));
+
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
