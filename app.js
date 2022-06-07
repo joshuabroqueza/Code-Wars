@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 //JS FUNDAMENTALS
 
 //1.
@@ -939,7 +939,7 @@
 /////////////////////////////////////////////////////////
 /////////    PROMISE, ASYNC, AWAIT //////////////////////
 
-console.log('start');
+console.log("start");
 
 // setTimeout(function () {
 //   console.log('heyy processsinggggg');
@@ -987,30 +987,30 @@ console.log('start');
 // console.log('END');
 
 /////ANOTHER EXAMPLE
-function loginUser(email, password) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log('Now we have the data');
-      resolve({ userEmail: email });
-    }, 3000);
-  });
-}
+// function loginUser(email, password) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log('Now we have the data');
+//       resolve({ userEmail: email });
+//     }, 3000);
+//   });
+// }
 
-function getUserVideos(email) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(['video 1', 'video 2', 'video 3']);
-    }, 2000);
-  });
-}
+// function getUserVideos(email) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(['video 1', 'video 2', 'video 3']);
+//     }, 2000);
+//   });
+// }
 
-function videoDetails(video) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve('Title of the video');
-    }, 2000);
-  });
-}
+// function videoDetails(video) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve('Title of the video');
+//     }, 2000);
+//   });
+// }
 
 // loginUser('wa', 'passWa')
 //   .then((user) => getUserVideos(user.email))
@@ -1035,18 +1035,63 @@ function videoDetails(video) {
 // Promise.all([yt, fb]).then((result) => console.log(result));
 
 ////USING ASYNC AND AWAIT
-async function displayUser() {
-  try {
-    const getLog = await loginUser('ed', 234234);
-    const videos = await getUserVideos(getLog.userEmail);
-    const details = await videoDetails(videos[0]);
-    console.log(details);
-  } catch (err) {
-    console.log('We could not get the videoss');
-  }
-}
+// async function displayUser() {
+//   try {
+//     const getLog = await loginUser('ed', 234234);
+//     const videos = await getUserVideos(getLog.userEmail);
+//     const details = await videoDetails(videos[0]);
+//     console.log(details);
+//   } catch (err) {
+//     console.log('We could not get the videoss');
+//   }
+// }
 
-displayUser();
+// displayUser();
+
+/////PRATICE
+
+// function receivingData(input) {
+//   setTimeout(() => {
+//     console.log(`Receving now the data`);
+//   }, 2000);
+// }
+
+// function enterAge(input) {
+//   setTimeout(() => {
+//     console.log(`My age is ${input}`);
+//   }, 2000);
+// }
+
+// function enterLocation(input) {
+//   setTimeout(() => {
+//     console.log(`and I'm from ${input} `);
+//   }, 3000);
+// }
+
+// async function userDetails() {
+//   const name = await enterName("Josh");
+//   const age = await enterAge("28");
+//   const location = await enterLocation("Legazpi");
+// }
+
+// userDetails();
+
+// async function f() {
+//   // let a = "This a test ouput";
+//   let promise = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Done");
+//       resolve("done");
+//     }, 3000);
+//   });
+
+//   let result = await promise;
+//   return result;
+// }
+
+// f();
+
+///////ANOTHER EXAMPLE
 
 //////////////////    END END END END      //////////////
 /////////////////////////////////////////////////////////
