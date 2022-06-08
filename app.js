@@ -1098,3 +1098,46 @@ console.log("start");
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
+
+//31. Given two integers a and b, which can be positive or negative, find the sum of all the integers between and including them and return it. If the two numbers are equal return a or b.
+
+// Note: a and b are not ordered!
+
+// Examples (a, b) --> output (explanation)
+// (1, 0) --> 1 (1 + 0 = 1)
+// (1, 2) --> 3 (1 + 2 = 3)
+// (0, 1) --> 1 (0 + 1 = 1)
+// (1, 1) --> 1 (1 since both are same)
+// (-1, 0) --> -1 (-1 + 0 = -1)
+// (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
+
+///SOLUTION
+// function getSum(a, b) {
+//   //Good luck!
+//   let d = [];
+
+//   if (a === b) {
+//     return a;
+//   } else if (a !== b && a < b) {
+//     for (let i = a; i <= b; i++) {
+//       d.push(i);
+//     }
+//   } else if (a !== b && a > b) {
+//     console.log("helloo");
+//     for (let i = a; i >= b; i--) {
+//       d.push(i);
+//     }
+//   }
+
+//   let total = d.reduce((prev, cur) => {
+//     return prev + cur;
+//   });
+
+//   console.log("hey", total);
+//   return total;
+// }
+
+// console.log(getSum(0, -1));
+
+///////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////
