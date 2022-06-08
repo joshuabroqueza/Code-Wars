@@ -1141,3 +1141,47 @@ console.log("start");
 
 ///////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////
+//32. Write a function to split a string and convert it into an array of words.
+// Examples (Input ==> Output):
+// "Robin Singh" ==> ["Robin", "Singh"]
+// "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
+
+//SOLUTION
+// function stringToArray(string) {
+//   return string.split(" ");
+// }
+// console.log(stringToArray("Robin Singh"));
+
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//33.Count the number of divisors of a positive integer n.
+// Random tests go up to n = 500000.
+// Examples (input --> output)
+// 4 --> 3 (1, 2, 4)
+// 5 --> 2 (1, 5)
+// 12 --> 6 (1, 2, 3, 4, 6, 12)
+// 30 --> 8 (1, 2, 3, 5, 6, 10, 15, 30)
+//SOLUTION
+function getDivisorsCnt(n) {
+  // todo
+  let a = n;
+  let arr = [];
+
+  function number_test(n) {
+    var result = n - Math.floor(n) !== 0;
+    if (result) {
+      return "has decimal";
+    }
+    return result++;
+  }
+
+  for (let i = 1; i <= a; i++) {
+    let res = a / i;
+    if (!number_test(res)) {
+      arr.push(i);
+    }
+  }
+  return arr.length;
+}
+
+console.log(getDivisorsCnt(12));
