@@ -1335,3 +1335,28 @@ console.log("start");
 
 //In the website solution:
 // const number = (busStops) => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
+
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
+//40. Welcome. In this kata, you are asked to square every digit of a number and concatenate them.
+//For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+//Note: The function accepts an integer and returns an integer
+
+//SOLUTION
+// function squareDigits(num) {
+//   let b = num.toString();
+//   let a = [];
+//   for (const x of b) {
+//     a.push(x ** 2);
+//   }
+//   return Number(a.join(""));
+// }
+// console.log(squareDigits(3212));
+
+//SAMPLE TEST
+// squareDigits(3523421) should equal 925491641
+// squareDigits(1692843) should equal 13681464169
+// squareDigits(7007799) should equal 490049498181
+
+//////////////////////////////////////////////////////
+//////////////////////////////////////////////////////
