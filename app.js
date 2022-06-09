@@ -1162,26 +1162,117 @@ console.log("start");
 // 12 --> 6 (1, 2, 3, 4, 6, 12)
 // 30 --> 8 (1, 2, 3, 5, 6, 10, 15, 30)
 //SOLUTION
-function getDivisorsCnt(n) {
-  // todo
-  let a = n;
-  let arr = [];
+// function getDivisorsCnt(n) {
+//   // todo
+//   let a = n;
+//   let arr = [];
 
-  function number_test(n) {
-    var result = n - Math.floor(n) !== 0;
-    if (result) {
-      return "has decimal";
-    }
-    return result++;
-  }
+//   function number_test(n) {
+//     var result = n - Math.floor(n) !== 0;
+//     if (result) {
+//       return "has decimal";
+//     }
+//     return result++;
+//   }
 
-  for (let i = 1; i <= a; i++) {
-    let res = a / i;
-    if (!number_test(res)) {
-      arr.push(i);
-    }
-  }
-  return arr.length;
-}
+//   for (let i = 1; i <= a; i++) {
+//     let res = a / i;
+//     if (!number_test(res)) {
+//       arr.push(i);
+//     }
+//   }
+//   return arr.length;
+// }
 
-console.log(getDivisorsCnt(12));
+// console.log(getDivisorsCnt(12));
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//34. Task
+// Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).
+// The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
+// Mind the input validation.
+
+// Example
+// { 6, 2, 1, 8, 10 } => 16
+// { 1, 1, 11, 2, 3 } => 6
+// Input validation
+// If an empty value ( null, None, Nothing etc. ) is given instead of an array, or the given array is an empty list or a list with only 1 element, return 0.
+
+//SOLUTION
+// function sumArray(array) {
+//   let b = 0;
+//   if (array === 0 || array === undefined || array === null) {
+//     return 0;
+//   } else if (array.length < 2) {
+//     return 0;
+//   } else if (array.length > 2) {
+//     let a = array.sort((a, b) => a - b);
+//     for (let i = 1; i < a.length - 1; i++) {
+//       b += a[i];
+//     }
+//   }
+//   return b;
+// }
+
+// console.log(sumArray([2, 34, 54, 12, 32]));
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+//.35 Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'.
+//Return the resulting string.
+//Note: input will never be an empty string
+
+//SOLUTION
+// function fakeBin(x) {
+//   let a = [];
+//   for (const [i, xs] of x) {
+//     if (i < 5) {
+//       a.push(0);
+//     } else if (i >= 5) {
+//       a.push(1);
+//     }
+//   }
+//   let result = a.join("");
+//   return result;
+// }
+
+// console.log("v1: ", fakeBin("45385593107843568"));
+
+// //ALTERNATIVE SOLUTION
+
+// function fakeBin2(x) {
+//   let a = x.split("");
+//   console.log(a);
+//   // let b = a.map((n) => {
+//   //   if (n < 5) {
+//   //     return 0;
+//   //   } else if (n >= 5) {
+//   //     return 1;
+//   //   }
+//   // });
+//   let b = a.map((n) => (n < 5 ? 0 : 1));
+//   console.log(b);
+//   let c = b.join("");
+//   console.log(c);
+//   return c;
+// }
+// console.log("v2: ", fakeBin2("45385593107843568"));
+
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+
+//36.Nathan loves cycling.
+// Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
+// You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
+
+// For example:
+// time = 3 ----> litres = 1
+// time = 6.7---> litres = 3
+// time = 11.8--> litres = 5
+
+//SOLUTION
+// function litres(time) {
+//   return Math.trunc(time * 0.5);
+// }
+// console.log(litres(12.3));
+//////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
