@@ -1276,3 +1276,62 @@ console.log("start");
 // console.log(litres(12.3));
 //////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////
+//37. Write a function that when given a URL as a string, parses out just the domain name and returns it as a string. For example:
+
+// * url = "http://github.com/carbonfive/raygun" -> domain name = "github"
+// * url = "http://www.zombie-bites.com"         -> domain name = "zombie-bites"
+// * url = "https://www.cnet.com"                -> domain name = cnet"
+
+//SOLUTION
+// function domainName(url) {
+//   //your code here
+
+//   let a = url.split("/");
+//   console.log(a);
+// }
+// console.log(domainName("http://google.com"));
+// console.log(domainName("http://google.co.jp"));
+// console.log(domainName("www.xakep.ru"));
+//NOTES: Not solve but can be solved
+
+//38. return true if the input is true
+
+//solution
+// function booleanToString(b) {
+//   return b ? "true" : "false";
+// }
+
+// console.log(booleanToString(false));
+
+//39.There is a bus moving in the city, and it takes and drop some people in each bus stop.
+// You are provided with a list (or array) of integer pairs. Elements of each pair represent number of people get into bus (The first item) and number of people get off the bus (The second item) in a bus stop.
+// Your task is to return number of people who are still in the bus after the last bus station (after the last array). Even though it is the last bus stop, the bus is not empty and some people are still in the bus, and they are probably sleeping there :D
+// Take a look on the test cases.
+// Please keep in mind that the test cases ensure that the number of people in the bus is always >= 0. So the return integer can't be negative.
+// The second value in the first integer array is 0, since the bus is empty in the first bus stop.
+
+//SOLUTION:
+// var number = function (busStops) {
+//   // Good Luck!
+//   let a = busStops;
+//   let totalEntry = [];
+//   console.log(a);
+//   for (let i = 0; i < busStops.length; i++) {
+//     totalEntry.push(a[i][0] - a[i][1]);
+//   }
+//   let b = totalEntry.reduce((acc, curr) => {
+//     return curr + acc;
+//   });
+//   return b;
+// };
+
+// console.log(
+//   number([
+//     [10, 0],
+//     [3, 5],
+//     [5, 8],
+//   ])
+// );
+
+//In the website solution:
+// const number = (busStops) => busStops.reduce((rem, [on, off]) => rem + on - off, 0);
