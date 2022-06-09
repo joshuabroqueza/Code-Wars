@@ -1394,3 +1394,12 @@ console.log("start");
 //       return -1;
 //   }
 // }
+
+///////////////////////////////////////////////
+///////////////////////////////////////////////
+//REGEX
+//Only returns letters and numbers
+//var a = 'Test123*** TEST';
+// var b = a.replace(/[^a-z0-9]/gi,'');
+// console.log(b);
+// This would return: Test123TEST
