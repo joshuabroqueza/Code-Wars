@@ -1403,3 +1403,85 @@ console.log("start");
 // var b = a.replace(/[^a-z0-9]/gi,'');
 // console.log(b);
 // This would return: Test123TEST
+
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+//42. Task:
+// Given a list of integers, determine whether the sum of its elements is odd or even.
+
+// Give your answer as a string matching "odd" or "even".
+// If the input array is empty consider it as: [0] (array with a zero).
+
+// Examples:
+// Input: [0]
+// Output: "even"
+
+// Input: [0, 1, 4]
+// Output: "odd"
+
+// Input: [0, -1, -5]
+// Output: "even"
+
+//SOLUTION
+// function oddOrEven(array) {
+//   //enter code here
+//   let b = array.length;
+//   let c = 0;
+
+//   if (b < 1) {
+//     return "even";
+//   } else if (b >= 1) {
+//     for (const value of array) {
+//       c += value;
+//     }
+//   }
+//   return c % 2 === 0 ? "even" : "odd";
+// }
+
+// console.log(oddOrEven([0, 1, 6]));
+
+// //ALTERNATE SOLUTION
+// // function oddOrEven(arr) {
+// //   return arr.reduce((a,b)=>a+b,0) % 2 ? 'odd' : 'even';
+// // }
+
+/////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////
+//43.Build a function that returns an array of integers from n to 1 where n>0.
+//Example : n=5 --> [5,4,3,2,1]
+
+// //SOLUTION
+// const reverseSeq = (n) => {
+//   let a = [];
+//   for (let i = n; i >= 1; i--) {
+//     a.push(i);
+//   }
+//   return a;
+// };
+// console.log(reverseSeq(5));
+// //ALTERNATE SOLUTION
+// // const reverseSeq = n => {
+// //   return Array(n).fill(0).map((e, i) => n - i );
+// // };
+
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+// //44. All of the animals are having a feast! Each animal is bringing one dish. There is just one rule: the dish must start and end with the same letters as the animal's name. For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
+
+// // Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+// // Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
+// //SOLUTION
+
+// function feast(beast, dish) {
+//   //your function here
+//   const firstInput = beast.charAt(0) + beast.charAt(beast.length - 1);
+//   const secondInput = dish.charAt(0) + dish.charAt(dish.length - 1);
+//   return firstInput === secondInput;
+// }
+
+// console.log(feast("great blue heron", "garlic naan"));
+
+//ALTERNATE SOLUTION
+// function feast(beast, dish) {
+//   return beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
+// }
