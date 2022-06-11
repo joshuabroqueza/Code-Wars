@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 //JS FUNDAMENTALS
 
 //1.
@@ -939,7 +939,7 @@
 /////////////////////////////////////////////////////////
 /////////    PROMISE, ASYNC, AWAIT //////////////////////
 
-console.log("start");
+console.log('start');
 
 // setTimeout(function () {
 //   console.log('heyy processsinggggg');
@@ -1485,3 +1485,23 @@ console.log("start");
 // function feast(beast, dish) {
 //   return beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
 // }
+
+/////////////////////////////////////////////////
+/////////////////////////////////////////////////
+//SORTING ARRAY DECVENDING
+function descendingOrder(n) {
+  //...
+  let b = String(n);
+  console.log(b.length);
+  let a = [];
+  for (let i = b.length; i >= 0; i--) {
+    console.log(b[i]);
+    a.push(b[i]);
+  }
+  // let c =  Number(a.join(''));
+  console.log(a);
+  let c = a.sort((a, b) => b - a);
+  return Number(c.join(''));
+}
+
+console.log(descendingOrder(12213));
