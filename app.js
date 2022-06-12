@@ -1489,19 +1489,124 @@ console.log('start');
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 //SORTING ARRAY DECVENDING
-function descendingOrder(n) {
-  //...
-  let b = String(n);
-  console.log(b.length);
-  let a = [];
-  for (let i = b.length; i >= 0; i--) {
-    console.log(b[i]);
-    a.push(b[i]);
-  }
-  // let c =  Number(a.join(''));
-  console.log(a);
-  let c = a.sort((a, b) => b - a);
-  return Number(c.join(''));
-}
+// function descendingOrder(n) {
+//   //...
+//   let b = String(n);
+//   console.log(b.length);
+//   let a = [];
+//   for (let i = b.length; i >= 0; i--) {
+//     console.log(b[i]);
+//     a.push(b[i]);
+//   }
+//   // let c =  Number(a.join(''));
+//   console.log(a);
+//   let c = a.sort((a, b) => b - a);
+//   return Number(c.join(''));
+// }
 
-console.log(descendingOrder(12213));
+// console.log(descendingOrder(12213));
+
+///////////////////////////////////////////////////
+//////////////////////////////////////////////////
+
+//exercise from mosh
+//Solution
+// 1.
+// function arrayFromRange(min, max) {
+//   let a = [];
+//   for (let i = min; i <= max; i++) {
+//     a.push(min++);
+//   }
+//   return a;
+// }
+
+// const number = arrayFromRange(-2, 3);
+// console.log(number);
+
+// 2.
+// const number = [1, 2, 3, 4];
+// function includes(array, searchElement) {
+//   for (const val of array) {
+//     if (val === searchElement) {
+//       return true;
+//     }
+//     return false;
+//   }
+// }
+
+// const isit = includes(number, 5);
+// console.log(isit);
+
+// // 3.
+// const number = [1, 2, 3, 4, 5, 1];
+// function except(array, excluded) {
+//   let output = [];
+//   for (const x of array) {
+//     if (!excluded.includes(x)) {
+//       output.push(x);
+//     }
+//   }
+//   return output;
+// }
+
+// const output = except(number, [2, 3]);
+// console.log(output);
+
+// // 4. Moving the array
+// const numbers = [2, 3, 4, 5, 1];
+// const output = move(numbers, 1, 1);
+// console.log(output);
+
+// function move(array, index, offest) {
+//   const output = [...array];
+//   const element = output.splice(index, 1)[0];
+//   output.splice(index + offest, 0, element);
+//   return output;
+// }
+
+// 5. Counting the occurence
+// const numbers = [2, 3, 1, 1, 4, 5, 1];
+// const count = countOccurence(numbers, 6);
+// console.log(count);
+
+// function countOccurence(array, searchElemet) {
+//   let a = 0;
+//   for (const x of array) {
+//     if (x === searchElemet) {
+//       a++;
+//     }
+//   }
+//   return a;
+
+// 6. Sorting Movies
+
+const movies = [
+  { title: 'a', year: 2018, rating: 4.5 },
+  { title: 'b', year: 2018, rating: 4.7 },
+  { title: 'c', year: 2018, rating: 3 },
+  { title: 'd', year: 2017, rating: 4.5 },
+];
+
+//All the movies in 2018 with rating > 4
+//Sort them by their rating
+//Descending order
+//Return only the title
+
+//Solution
+const returnMovies = function (movies) {
+  console.log(movies);
+  let a = [];
+  let titleOnly = [];
+  for (const x of movies) {
+    if (x.rating > 4) {
+      a.push(x);
+    }
+  }
+  const sortingByOrder = a
+    .sort((a, b) => b.rating - a.rating)
+    .map((m) => m.title);
+
+  console.log(sortingByOrder);
+};
+
+console.log(returnMovies(movies));
