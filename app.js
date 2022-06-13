@@ -1678,3 +1678,56 @@ console.log("start");
 //           return 0;
 //   }
 // }
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+
+//// 47. Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+// function removeExclamationMarks(s) {
+//   return s.replace(/[^a-zA-Z ]/g, "");
+// }
+// console.log(removeExclamationMarks("sdfsd,sdf,,s"));
+
+let a = "ABB";
+console.log(a.includes("A"));
+
+function duplicateCount(text) {
+  //...
+  if (!text) {
+    return 0;
+  }
+  let c = text.toLowerCase();
+  let a = "";
+  let b = [];
+  for (let i = 0; i < c.length; i++) {
+    if (!a.includes(c[i])) {
+      a += c[i];
+    } else {
+      if (!b.includes(c[i])) {
+        b.push(c[i]);
+      }
+    }
+  }
+  return b.length;
+}
+
+console.log(duplicateCount("aabBcde"));
+
+//48.You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
+// If it is a square, return its area. If it is a rectangle, return its perimeter.
+
+// Example(Input1, Input2 --> Output):
+
+// 6, 10 --> 32
+// 3, 3 --> 9
+// Note: for the purposes of this kata you will assume that it is a square if its length and width are equal, otherwise it is a rectangle.
+
+//SOLUTION
+const areaOrPerimeter = function (l, w) {
+  // Return your answer
+  if (l === w) {
+    return w * l;
+  } else {
+    return (l + w) * 2;
+  }
+};
