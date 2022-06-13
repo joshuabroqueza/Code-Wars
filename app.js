@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 //JS FUNDAMENTALS
 
 //1.
@@ -939,7 +939,7 @@
 /////////////////////////////////////////////////////////
 /////////    PROMISE, ASYNC, AWAIT //////////////////////
 
-console.log('start');
+console.log("start");
 
 // setTimeout(function () {
 //   console.log('heyy processsinggggg');
@@ -1580,33 +1580,101 @@ console.log('start');
 
 // 6. Sorting Movies
 
-const movies = [
-  { title: 'a', year: 2018, rating: 4.5 },
-  { title: 'b', year: 2018, rating: 4.7 },
-  { title: 'c', year: 2018, rating: 3 },
-  { title: 'd', year: 2017, rating: 4.5 },
-];
+// const movies = [
+//   { title: 'a', year: 2018, rating: 4.5 },
+//   { title: 'b', year: 2018, rating: 4.7 },
+//   { title: 'c', year: 2018, rating: 3 },
+//   { title: 'd', year: 2017, rating: 4.5 },
+// ];
 
-//All the movies in 2018 with rating > 4
-//Sort them by their rating
-//Descending order
-//Return only the title
+// //All the movies in 2018 with rating > 4
+// //Sort them by their rating
+// //Descending order
+// //Return only the title
 
-//Solution
-const returnMovies = function (movies) {
-  console.log(movies);
-  let a = [];
-  let titleOnly = [];
-  for (const x of movies) {
-    if (x.rating > 4) {
-      a.push(x);
-    }
+// //Solution
+// const returnMovies = function (movies) {
+//   console.log(movies);
+//   let a = [];
+//   let titleOnly = [];
+//   for (const x of movies) {
+//     if (x.rating > 4) {
+//       a.push(x);
+//     }
+//   }
+//   const sortingByOrder = a
+//     .sort((a, b) => b.rating - a.rating)
+//     .map((m) => m.title);
+
+//   console.log(sortingByOrder);
+// };
+
+// console.log(returnMovies(movies));
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+// 45. Build a pyramid-shaped tower given a positive integer number of floors. A tower block is represented with "*" character.
+// For example, a tower with 3 floors looks like this:
+// [
+//   "  *  ",
+//   " *** ",
+//   "*****"
+// ]
+
+function towerBuilder(nFloors) {
+  var finalArray = [];
+  var numSpaces = 0;
+  for (let i = nFloors; i > 0; i--) {
+    finalArray.push(
+      " ".repeat(numSpaces) +
+        "*".repeat(i) +
+        "*".repeat(i - 1) +
+        " ".repeat(numSpaces)
+    );
+    numSpaces++;
   }
-  const sortingByOrder = a
-    .sort((a, b) => b.rating - a.rating)
-    .map((m) => m.title);
+  return finalArray.reverse();
+}
 
-  console.log(sortingByOrder);
-};
+console.log(towerBuilder(7));
 
-console.log(returnMovies(movies));
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+
+// 46.DESCRIPTION:
+// Your task is to create a function that does four basic mathematical operations.
+
+// The function should take three arguments - operation(string/char), value1(number), value2(number).
+// The function should return result of numbers after applying the chosen operation.
+
+// Examples(Operator, value1, value2) --> output
+// ('+', 4, 7) --> 11
+// ('-', 15, 18) --> -3
+// ('*', 5, 5) --> 25
+// ('/', 49, 7) --> 7
+
+// //SOLUTION
+
+// function basicOp(operation, value1, value2) {
+//   if (operation == "+") return value1 + value2;
+//   if (operation == "-") return value1 - value2;
+//   if (operation == "*") return value1 * value2;
+//   if (operation == "/") return value1 / value2;
+// }
+
+// console.log(basicOp("-", 1, 3));
+// //Using case switch method
+// function basicOp(operation, value1, value2) {
+//   switch (operation) {
+//       case '+':
+//           return value1 + value2;
+//       case '-':
+//           return value1 - value2;
+//       case '*':
+//           return value1 * value2;
+//       case '/':
+//           return value1 / value2;
+//       default:
+//           return 0;
+//   }
+// }
