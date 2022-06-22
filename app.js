@@ -1688,46 +1688,80 @@ console.log("start");
 // }
 // console.log(removeExclamationMarks("sdfsd,sdf,,s"));
 
-let a = "ABB";
-console.log(a.includes("A"));
+// let a = "ABB";
+// console.log(a.includes("A"));
 
-function duplicateCount(text) {
-  //...
-  if (!text) {
-    return 0;
+// function duplicateCount(text) {
+//   //...
+//   if (!text) {
+//     return 0;
+//   }
+//   let c = text.toLowerCase();
+//   let a = "";
+//   let b = [];
+//   for (let i = 0; i < c.length; i++) {
+//     if (!a.includes(c[i])) {
+//       a += c[i];
+//     } else {
+//       if (!b.includes(c[i])) {
+//         b.push(c[i]);
+//       }
+//     }
+//   }
+//   return b.length;
+// }
+
+// console.log(duplicateCount("aabBcde"));
+
+// //48.You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
+// // If it is a square, return its area. If it is a rectangle, return its perimeter.
+
+// // Example(Input1, Input2 --> Output):
+
+// // 6, 10 --> 32
+// // 3, 3 --> 9
+// // Note: for the purposes of this kata you will assume that it is a square if its length and width are equal, otherwise it is a rectangle.
+
+// //SOLUTION
+// const areaOrPerimeter = function (l, w) {
+//   // Return your answer
+//   if (l === w) {
+//     return w * l;
+//   } else {
+//     return (l + w) * 2;
+//   }
+// };
+
+////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////
+// 48. Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+
+// It should remove all values from list a, which are present in list b keeping their order.
+
+// arrayDiff([1,2],[1]) == [2]
+// If a value is present in b, all of its occurrences must be removed from the other:
+
+// arrayDiff([1,2,2,2,3],[2]) == [1,3]
+
+//Solution
+
+function arrayDiff(a, b) {
+  // let identifier = b[0];
+  if (!b) {
+    return a;
   }
-  let c = text.toLowerCase();
-  let a = "";
-  let b = [];
-  for (let i = 0; i < c.length; i++) {
-    if (!a.includes(c[i])) {
-      a += c[i];
-    } else {
-      if (!b.includes(c[i])) {
-        b.push(c[i]);
+  let newArr = [];
+  for (const x of a) {
+    for (const xs of b) {
+      if (x !== xs) {
+        newArr.push(x);
       }
     }
   }
-  return b.length;
+  return newArr;
+  // console.log("codewars", newArr);
 }
 
-console.log(duplicateCount("aabBcde"));
+arrayDiff([1, 2], [1]);
 
-//48.You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
-// If it is a square, return its area. If it is a rectangle, return its perimeter.
-
-// Example(Input1, Input2 --> Output):
-
-// 6, 10 --> 32
-// 3, 3 --> 9
-// Note: for the purposes of this kata you will assume that it is a square if its length and width are equal, otherwise it is a rectangle.
-
-//SOLUTION
-const areaOrPerimeter = function (l, w) {
-  // Return your answer
-  if (l === w) {
-    return w * l;
-  } else {
-    return (l + w) * 2;
-  }
-};
+//Continue this: https://www.codewars.com/kata/523f5d21c841566fde000009/train/javascript
