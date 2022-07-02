@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 //JS FUNDAMENTALS
 
 //1.
@@ -939,7 +939,7 @@
 /////////////////////////////////////////////////////////
 /////////    PROMISE, ASYNC, AWAIT //////////////////////
 
-console.log("start");
+console.log('start');
 
 // setTimeout(function () {
 //   console.log('heyy processsinggggg');
@@ -1591,7 +1591,6 @@ console.log("start");
 // //Sort them by their rating
 // //Descending order
 // //Return only the title
-<<<<<<< HEAD
 
 // //Solution
 // const returnMovies = function (movies) {
@@ -1635,209 +1634,3 @@ function find_difference(a, b) {
       b.reduce((previous, current) => previous * current)
   );
 }
-=======
-
-// //Solution
-// const returnMovies = function (movies) {
-//   console.log(movies);
-//   let a = [];
-//   let titleOnly = [];
-//   for (const x of movies) {
-//     if (x.rating > 4) {
-//       a.push(x);
-//     }
-//   }
-//   const sortingByOrder = a
-//     .sort((a, b) => b.rating - a.rating)
-//     .map((m) => m.title);
-
-//   console.log(sortingByOrder);
-// };
-
-// console.log(returnMovies(movies));
-
-////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////
-// 45. Build a pyramid-shaped tower given a positive integer number of floors. A tower block is represented with "*" character.
-// For example, a tower with 3 floors looks like this:
-// [
-//   "  *  ",
-//   " *** ",
-//   "*****"
-// ]
-
-// function towerBuilder(nFloors) {
-//   var finalArray = [];
-//   var numSpaces = 0;
-//   for (let i = nFloors; i > 0; i--) {
-//     finalArray.push(
-//       " ".repeat(numSpaces) +
-//         "*".repeat(i) +
-//         "*".repeat(i - 1) +
-//         " ".repeat(numSpaces)
-//     );
-//     numSpaces++;
-//   }
-//   return finalArray.reverse();
-// }
-
-// console.log(towerBuilder(7));
-
-////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////
-
-// 46.DESCRIPTION:
-// Your task is to create a function that does four basic mathematical operations.
-
-// The function should take three arguments - operation(string/char), value1(number), value2(number).
-// The function should return result of numbers after applying the chosen operation.
-
-// Examples(Operator, value1, value2) --> output
-// ('+', 4, 7) --> 11
-// ('-', 15, 18) --> -3
-// ('*', 5, 5) --> 25
-// ('/', 49, 7) --> 7
-
-// //SOLUTION
-
-// function basicOp(operation, value1, value2) {
-//   if (operation == "+") return value1 + value2;
-//   if (operation == "-") return value1 - value2;
-//   if (operation == "*") return value1 * value2;
-//   if (operation == "/") return value1 / value2;
-// }
-
-// console.log(basicOp("-", 1, 3));
-// //Using case switch method
-// function basicOp(operation, value1, value2) {
-//   switch (operation) {
-//       case '+':
-//           return value1 + value2;
-//       case '-':
-//           return value1 - value2;
-//       case '*':
-//           return value1 * value2;
-//       case '/':
-//           return value1 / value2;
-//       default:
-//           return 0;
-//   }
-// }
-
-////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////
-
-//// 47. Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
-// function removeExclamationMarks(s) {
-//   return s.replace(/[^a-zA-Z ]/g, "");
-// }
-// console.log(removeExclamationMarks("sdfsd,sdf,,s"));
-
-// let a = "ABB";
-// console.log(a.includes("A"));
-
-// function duplicateCount(text) {
-//   //...
-//   if (!text) {
-//     return 0;
-//   }
-//   let c = text.toLowerCase();
-//   let a = "";
-//   let b = [];
-//   for (let i = 0; i < c.length; i++) {
-//     if (!a.includes(c[i])) {
-//       a += c[i];
-//     } else {
-//       if (!b.includes(c[i])) {
-//         b.push(c[i]);
-//       }
-//     }
-//   }
-//   return b.length;
-// }
-
-// console.log(duplicateCount("aabBcde"));
-
-// //48.You are given the length and width of a 4-sided polygon. The polygon can either be a rectangle or a square.
-// // If it is a square, return its area. If it is a rectangle, return its perimeter.
-
-// // Example(Input1, Input2 --> Output):
-
-// // 6, 10 --> 32
-// // 3, 3 --> 9
-// // Note: for the purposes of this kata you will assume that it is a square if its length and width are equal, otherwise it is a rectangle.
-
-// //SOLUTION
-// const areaOrPerimeter = function (l, w) {
-//   // Return your answer
-//   if (l === w) {
-//     return w * l;
-//   } else {
-//     return (l + w) * 2;
-//   }
-// };
-
-////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////
-// 48. Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
-
-// It should remove all values from list a, which are present in list b keeping their order.
-
-// arrayDiff([1,2],[1]) == [2]
-// If a value is present in b, all of its occurrences must be removed from the other:
-
-// arrayDiff([1,2,2,2,3],[2]) == [1,3]
-
-//Solution
-
-function arrayDiff(a, b) {
-  // let identifier = b[0];
-  if (!b) {
-    return a;
-  }
-  let newArr = [];
-  for (const x of a) {
-    for (const xs of b) {
-      if (x !== xs) {
-        newArr.push(x);
-      }
-    }
-  }
-  return newArr;
-  // console.log("codewars", newArr);
-}
-
-arrayDiff([1, 2], [1]);
-
-//Continue this: https://www.codewars.com/kata/523f5d21c841566fde000009/train/javascript
-//Doesnt passed the test, i dont know why.
-
-//////////////////////////////////////////
-//////////////////////////////////////////
-// 49.You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
-// Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
-
-// []                                -->  "no one likes this"
-// ["Peter"]                         -->  "Peter likes this"
-// ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
-// ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
-// ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
-
-//SOLUTION
-// function likes(names) {
-//   // TODO
-
-//   if (names.length === 0) {
-//     return "no one likes this";
-//   } else if (names.length === 1) {
-//     return `${names[0]} likes this`;
-//   } else if (names.length === 2) {
-//     return `${names[0]} and ${names[1]} like this`;
-//   } else if (names.length === 3) {
-//     return `${names[0]}, ${names[1]} and ${names[2]} like this`;
-//   } else if (names.length > 3) {
-//     let a = names.length - 2;
-//     return `${names[0]}, ${names[1]} and ${a} others like this`;
-//   }
-// }
->>>>>>> b0c04be1e6d3b2d60d3dd3f905a6c08806578df2
