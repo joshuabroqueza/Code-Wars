@@ -1580,33 +1580,57 @@ console.log('start');
 
 // 6. Sorting Movies
 
-const movies = [
-  { title: 'a', year: 2018, rating: 4.5 },
-  { title: 'b', year: 2018, rating: 4.7 },
-  { title: 'c', year: 2018, rating: 3 },
-  { title: 'd', year: 2017, rating: 4.5 },
-];
+// const movies = [
+//   { title: 'a', year: 2018, rating: 4.5 },
+//   { title: 'b', year: 2018, rating: 4.7 },
+//   { title: 'c', year: 2018, rating: 3 },
+//   { title: 'd', year: 2017, rating: 4.5 },
+// ];
 
-//All the movies in 2018 with rating > 4
-//Sort them by their rating
-//Descending order
-//Return only the title
+// //All the movies in 2018 with rating > 4
+// //Sort them by their rating
+// //Descending order
+// //Return only the title
 
-//Solution
-const returnMovies = function (movies) {
-  console.log(movies);
-  let a = [];
-  let titleOnly = [];
-  for (const x of movies) {
-    if (x.rating > 4) {
-      a.push(x);
-    }
-  }
-  const sortingByOrder = a
-    .sort((a, b) => b.rating - a.rating)
-    .map((m) => m.title);
+// //Solution
+// const returnMovies = function (movies) {
+//   console.log(movies);
+//   let a = [];
+//   let titleOnly = [];
+//   for (const x of movies) {
+//     if (x.rating > 4) {
+//       a.push(x);
+//     }
+//   }
+//   const sortingByOrder = a
+//     .sort((a, b) => b.rating - a.rating)
+//     .map((m) => m.title);
 
-  console.log(sortingByOrder);
-};
+//   console.log(sortingByOrder);
+// };
 
-console.log(returnMovies(movies));
+// console.log(returnMovies(movies));
+
+/////////////////////////////////////////////////////////////////
+//In this simple exercise, you will create a program that will take two lists of integers, a and b. Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b. You must find the difference of the cuboids' volumes regardless of which is bigger.
+
+// For example, if the parameters passed are ([2, 2, 3], [5, 4, 1]), the volume of a is 12 and the volume of b is 20. Therefore, the function should return 8.
+
+// Your function will be tested with pre-made examples as well as random ones.
+
+// If you can, try writing it in one line of code.
+
+//SOLUTION
+function findDifference(a, b) {
+  return a.reduce((pre, cur) => pre * cur) > b.reduce((pre, cur) => pre * cur)
+    ? a.reduce((pre, cur) => pre * cur) - b.reduce((pre, cur) => pre * cur)
+    : b.reduce((pre, cur) => pre * cur) - a.reduce((pre, cur) => pre * cur);
+}
+
+//Alternative
+function find_difference(a, b) {
+  return Math.abs(
+    a.reduce((previous, current) => previous * current) -
+      b.reduce((previous, current) => previous * current)
+  );
+}
