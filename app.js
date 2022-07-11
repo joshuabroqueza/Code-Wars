@@ -1905,3 +1905,70 @@ const pokemon = ['Bulbasaur', 'Charmander', 'Squirtle'];
 const paragraphs = pokemon.map((mon) => `<p>${mon}</p>`);
 
 // console.log(paragraphs)
+// ///////WORKING WITH MAP METHOD
+
+// /*
+// Challenge 1:
+// Given an array of numbers, return an array of each number, squared
+// */
+// const nums = [1, 2, 3, 4, 5];
+// // -->       [1, 4, 9, 16, 25]
+// // Your code here
+// const squares = nums.map(function (num) {
+//   return num * num;
+// });
+
+// // console.log(squares)
+
+// /*
+// Challenge 2:
+// Given an array of strings, return an array where
+// the first letter of each string is capitalized
+// */
+
+// const names = ['alice', 'bob', 'charlie', 'danielle'];
+// // -->        ["Alice", "Bob", "Charlie", "Danielle"]
+// // Your code here
+// const capitalized = names.map((name) => name[0].toUpperCase() + name.slice(1));
+
+// console.log(capitalized);
+
+// /*
+// Challenge 3:
+// Given an array of strings, return an array of strings that wraps each
+// of the original strings in an HTML-like <p></p> tag.
+
+// E.g. given: ["Bulbasaur", "Charmander", "Squirtle"]
+// return: ["<p>Bulbasaur</p>", "<p>Charmander</p>", "<p>Squirtle</p>"]
+// */
+
+// const pokemon = ['Bulbasaur', 'Charmander', 'Squirtle'];
+// // -->          ["<p>Bulbasaur</p>", "<p>Charmander</p>", "<p>Squirtle</p>"]
+// // Your code here
+
+// const paragraphs = pokemon.map((mon) => `<p>${mon}</p>`);
+
+// // console.log(paragraphs)
+
+////EXERCISE -- LOOPING/ARRAY
+// Issue
+// Looks like some hoodlum plumber and his brother has been running around and damaging your stages again.
+
+// The pipes connecting your level's stages together need to be fixed before you receive any more complaints.
+
+// Pipes list is correct when each pipe after the first index is greater (+1) than the previous one, and that there is no duplicates.
+
+// Task
+// Given the a list of numbers, return a fixed list so that the values increment by 1 for each index from the minimum value up to the maximum value (both included).
+
+// Example
+// Input:  1,3,5,6,7,8 Output: 1,2,3,4,5,6,7,8
+
+//SOLUTION
+function pipeFix(numbers) {
+  let a = [numbers[0]];
+  for (let i = numbers[0]; i < numbers.slice(-1); i++) {
+    a.push(i + 1);
+  }
+  return a;
+}
