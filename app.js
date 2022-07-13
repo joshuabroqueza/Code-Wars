@@ -1863,31 +1863,31 @@
 
 ///////WORKING WITH MAP METHOD
 
-/*
-Challenge 1:
-Given an array of numbers, return an array of each number, squared
-*/
-const nums = [1, 2, 3, 4, 5];
-// -->       [1, 4, 9, 16, 25]
-// Your code here
-const squares = nums.map(function (num) {
-  return num * num;
-});
+// /*
+// Challenge 1:
+// Given an array of numbers, return an array of each number, squared
+// */
+// const nums = [1, 2, 3, 4, 5];
+// // -->       [1, 4, 9, 16, 25]
+// // Your code here
+// const squares = nums.map(function (num) {
+//   return num * num;
+// });
 
-// console.log(squares)
+// // console.log(squares)
 
-/*
-Challenge 2:
-Given an array of strings, return an array where 
-the first letter of each string is capitalized
-*/
+// /*
+// Challenge 2:
+// Given an array of strings, return an array where
+// the first letter of each string is capitalized
+// */
 
-const names = ["alice", "bob", "charlie", "danielle"];
-// -->        ["Alice", "Bob", "Charlie", "Danielle"]
-// Your code here
-const capitalized = names.map((name) => name[0].toUpperCase() + name.slice(1));
+// const names = ["alice", "bob", "charlie", "danielle"];
+// // -->        ["Alice", "Bob", "Charlie", "Danielle"]
+// // Your code here
+// const capitalized = names.map((name) => name[0].toUpperCase() + name.slice(1));
 
-console.log(capitalized);
+// console.log(capitalized);
 
 /*
 Challenge 3:
@@ -1964,14 +1964,14 @@ const paragraphs = pokemon.map((mon) => `<p>${mon}</p>`);
 // Example
 // Input:  1,3,5,6,7,8 Output: 1,2,3,4,5,6,7,8
 
-//SOLUTION
-function pipeFix(numbers) {
-  let a = [numbers[0]];
-  for (let i = numbers[0]; i < numbers.slice(-1); i++) {
-    a.push(i + 1);
-  }
-  return a;
-}
+// //SOLUTION
+// function pipeFix(numbers) {
+//   let a = [numbers[0]];
+//   for (let i = numbers[0]; i < numbers.slice(-1); i++) {
+//     a.push(i + 1);
+//   }
+//   return a;
+// }
 
 ///EXERCISE
 // Given two numbers and an arithmetic operator (the name of it, as a string), return the result of the two numbers having that operator used on them.
@@ -1987,24 +1987,24 @@ function pipeFix(numbers) {
 // 5, 2, "multiply" --> 10
 // 5, 2, "divide"   --> 2.5
 
-//SOLUTION
-function arithmetic(a, b, operator) {
-  //your code here!
-  if (operator == "add") {
-    return a + b;
-  } else if (operator == "subtract") {
-    return a - b;
-  } else if (operator == "multiply") {
-    return a * b;
-  } else if (operator == "divide") {
-    return a / b;
-  }
-}
+// //SOLUTION
+// function arithmetic(a, b, operator) {
+//   //your code here!
+//   if (operator == "add") {
+//     return a + b;
+//   } else if (operator == "subtract") {
+//     return a - b;
+//   } else if (operator == "multiply") {
+//     return a * b;
+//   } else if (operator == "divide") {
+//     return a / b;
+//   }
+// }
 
-console.log(arithmetic(1, 2, "add"));
-console.log(arithmetic(8, 2, "subtract"));
-console.log(arithmetic(5, 2, "multiply"));
-console.log(arithmetic(8, 2, "divide"));
+// console.log(arithmetic(1, 2, "add"));
+// console.log(arithmetic(8, 2, "subtract"));
+// console.log(arithmetic(5, 2, "multiply"));
+// console.log(arithmetic(8, 2, "divide"));
 
 /////////////////////////////
 /////////////////////////////
@@ -2052,3 +2052,38 @@ const hours = date.getHours()
 // }
 
 // console.log(greeting("Bob"))
+
+// //Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+// // Examples input/output:
+
+// // XO("ooxx") => true
+// // XO("xooxx") => false
+// // XO("ooxXm") => true
+// // XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// // XO("zzoo") => false
+
+// ////SOLUTION
+// function XO(str) {
+//   //code here
+//   let a = str.toLowerCase();
+//   let c = [];
+//   for (const k of a) {
+//     c.push(k);
+//   }
+//   let b = c.filter((val) => val === "o");
+//   let d = c.filter((val) => val === "x");
+//   console.log(b);
+//   console.log(d);
+//   if (b.length === d.length) {
+//     return true;
+//   }
+//   return false;
+// }
+
+// console.log(XO("wwwww"));
+// Test.assertEquals(XO("xo"), true);
+// Test.assertEquals(XO("xxOo"), true);
+// Test.assertEquals(XO("xxxm"), false);
+// Test.assertEquals(XO("Oo"), false);
+// Test.assertEquals(XO("ooom"), false);
