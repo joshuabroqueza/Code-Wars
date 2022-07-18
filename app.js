@@ -2087,3 +2087,18 @@ const hours = date.getHours()
 // Test.assertEquals(XO("xxxm"), false);
 // Test.assertEquals(XO("Oo"), false);
 // Test.assertEquals(XO("ooom"), false);
+
+
+// //Check if the number is a perfect square number 
+// //Solution
+// var isSquare = function(n){
+//     if (n < 0){
+//       return false;
+//     }
+    
+//     if(Number.isInteger(Math.sqrt(n))){
+//       return true;
+//     }else{
+//       return false;
+//     }
+//   }
