@@ -2088,17 +2088,75 @@ const hours = date.getHours()
 // Test.assertEquals(XO("Oo"), false);
 // Test.assertEquals(XO("ooom"), false);
 
-
-// //Check if the number is a perfect square number 
+// //Check if the number is a perfect square number
 // //Solution
 // var isSquare = function(n){
 //     if (n < 0){
 //       return false;
 //     }
-    
+
 //     if(Number.isInteger(Math.sqrt(n))){
 //       return true;
 //     }else{
 //       return false;
 //     }
 //   }
+
+//Exercise
+// Create a combat function that takes the player's current health and the amount of damage recieved, and returns the player's new health. Health can't be less than 0.
+//Solution
+//
+// function combat(health, damage) {
+//   // Write your code herei
+//   if (health < damage) {
+//     return 0;
+//   } else if (health > damage) {
+//     return health - damage;
+//   }
+// }
+
+// console.log(combat(20));
+
+/*
+
+DESCRIPTION:
+
+Wolves have been reintroduced to Great Britain. You are a sheep farmer, and are now plagued by wolves which pretend to be sheep. Fortunately, you are good at spotting them.
+
+Warn the sheep in front of the wolf that it is about to be eaten. Remember that you are standing at the front of the queue which is at the end of the array:
+
+[sheep, sheep, sheep, sheep, sheep, wolf, sheep, sheep]      (YOU ARE HERE AT THE FRONT OF THE QUEUE)
+   7      6      5      4      3            2      1
+If the wolf is the closest animal to you, return "Pls go away and stop eating my sheep". Otherwise, return "Oi! Sheep number N! You are about to be eaten by a wolf!" where N is the sheep's position in the queue.
+
+Note: there will always be exactly one wolf in the array.
+
+Examples
+Input: ["sheep", "sheep", "sheep", "wolf", "sheep"]
+Output: "Oi! Sheep number 1! You are about to be eaten by a wolf!"
+
+Input: ["sheep", "sheep", "wolf"]
+Output: "Pls go away and stop eating my sheep"
+
+//SOLUTION
+function warnTheSheep(queue) {
+  const b = queue.length;
+  let wolfPosition = 0;
+  for (let i = 0; i < queue.length; i++) {
+    if (queue[i] === "wolf") {
+      wolfPosition += i;
+    }
+  }
+  if (wolfPosition == b - 1) {
+    return `Pls go away and stop eating my sheep`;
+  } else {
+    let d = b - wolfPosition;
+    return `Oi! Sheep number ${d - 1}! You are about to be eaten by a wolf!`;
+  }
+}
+
+console.log(
+  warnTheSheep(["sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"])
+);
+
+*/
