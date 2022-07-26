@@ -2216,3 +2216,42 @@ console.log(gimme([2, 3, 1]));
 console.log(gimme([-2, -3.2, 1]));
 console.log(gimme([5.9, 10.4, 14.2]));
 */
+
+/*
+Complete the function which converts a binary number
+(given as a string) to a decimal number.
+
+
+Solution::
+
+function binToDec(bin){
+  return parseInt(bin, 2)
+}
+
+*/
+
+/*
+Remove an exclamation mark from the end of a string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
+
+Examples
+remove("Hi!") === "Hi"
+remove("Hi!!!") === "Hi!!"
+remove("!Hi") === "!Hi"
+remove("!Hi!") === "!Hi"
+remove("Hi! Hi!") === "Hi! Hi"
+remove("Hi") === "Hi"
+
+SOLUTION: 
+
+function remove(string) {
+  // return string.slice(0, -1);
+  return string.slice(-1) === "!" ? string.slice(0, -1) : string;
+}
+
+*/
+function reverse(string) {
+  //your code here
+  return string.split(" ").reverse().join(" ");
+}
+
+console.log(reverse("I am an expert at this"));
